@@ -1,0 +1,68 @@
+<style>
+    .table2 {
+    border: 1px solid greenyellow;
+    border-collapse: collapse;
+    margin-left: 30%;
+    height: 200px;
+    width: 500px;
+}
+th, td {
+    border: 1px solid greenyellow;
+    border-collapse: collapse;
+    text-align: center;
+}
+.table1 {
+    border: 1px solid greenyellow;
+    
+    margin-left: 35%;
+    
+}
+     
+    
+</style>
+Dept Number:<input type="text"   [(ngModel)]="deptNo"  /><br><br>
+Dept Name:<input type="text"   [(ngModel)]="deptName" /><br><br>
+Location:<input type="text"   [(ngModel)]="location" /><br><br>
+<input type="button" (click)="addItem()" value="AddItem" />
+<input type="button" (click)="editItem()" value="EditItem" />
+<input type="button" (click)="removeAllItems()" value="RemoveAllItems" />
+ <br><br>
+ <div *ngIf="dept1; else elseBlock">
+  <table class="table2"  >
+        <tr>
+            <th>DeptNo</th>
+            <th>DeptName</th>
+            <th>Location</th>
+            <th></th>
+        </tr>
+    
+        <tr *ngFor="let item of depts; index as i">
+            
+            <td><b>{{item.deptNo }}</b></td>
+            <td> {{item. deptName | titlecase}}</td>
+            <td>{{item. location | uppercase}}</td>
+            <td><a href="#" (click)="removeItem(i)">Remove</a> | <a href="#" (click)="selectItem(i)">Select</a> </td>
+        </tr>
+    
+    </table> 
+</div> 
+<ng-template #elseBlock> 
+    <table class="table1">
+        <tr>
+            <td><h4 style="color:brown;padding-left: 20px;padding-right: 20px">Departments Details are not Available </h4></td>
+        </tr>
+    </table>
+</ng-template>
+
+<!--
+
+ <tr *ngFor="let item of depts">
+     <li> <b><u>{{item.deptNo}}</u></b> </li> 
+      <li>{{item. deptName}}</li>
+      <li>{{item. location}}</li>
+       
+
+   
+    
+</ul>-->
+ 

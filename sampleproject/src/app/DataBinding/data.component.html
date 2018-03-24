@@ -1,0 +1,65 @@
+<style>
+    .divstyle{
+        width: 21%;
+        float: left;
+    }
+    </style> 
+
+
+<div  >
+    <h1 style="color:red">Data Binding Using Expression </h1>
+    Name:{{uname}}
+    
+</div>
+<hr>
+<div  >
+    <h1 style="color:green"> Data Binding Using Property</h1>
+    Name:<span [innerText]="uname"></span>
+    <hr/>
+    Age:<input type="text" [value]="age" [disabled]="age > 18" />
+    <hr>
+
+</div>
+<br><br>
+<div  >
+   Name :<input type="text" [(ngModel)]="uname"/>
+    
+    <h1 style="color:blue">Welcome to {{uname}}</h1>
+</div>
+
+<div  >
+    Image Name:<input type="text" [value]="image" [(ngModel)]="image"/><br><br><br>
+
+    <select  [(ngModel)]="image" >
+        <option>Image1.jpg</option>
+        <option>Image2.jpg</option>
+        <option>Image3.jpg</option>
+        <option>Image4.jpg</option>
+        <option>Image5.jpg</option>
+        <option>Image6.jpg</option>
+    </select><br><br><br>
+    <img src="./assets/images/{{image}}"/><br><br>
+
+    <hr>
+</div>
+<div  >
+    <br>
+    <input type="text" [(ngModel)]="name" /><br><br>
+    <input type="button" (click)="welCome()" value="ClickMe"/><br>
+    <h1 style="color:lightsalmon">{{str}}</h1>
+    <br>
+    <br>
+</div>
+<hr>
+    <br>
+    <br>
+    <div  >
+            <input type="text" [(ngModel)]="name1" /><br><br>
+            <input type="password" [(ngModel)]="pass" /><br><br>
+            <input type="button" (click)="login()" value="Login"/><br>
+            <h1 style="color:lightgreen" >{{str1}}</h1>
+    </div>
+    <br>
+    <br>
+    
+

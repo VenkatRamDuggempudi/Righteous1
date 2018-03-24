@@ -1,0 +1,27 @@
+<style>
+.emp{
+ border: 1px solid green;
+ margin-left: 10px;
+ margin-bottom: 50px;
+ padding-left: 50px;
+ width: 12%;
+ float: left;
+}
+
+</style>
+
+<div>
+        <div class="emp">
+                <h4 style="color:red"><b><u>Employee NO:</u></b>  </h4> 
+                 <h4 style="color:green">Employee Name:</h4>
+                 <h4 style="color:blue">Salary:</h4>
+                  <h4 style="color:orange">DeptNo:</h4>
+              </div>
+   <div class="emp" *ngFor="let item of employees" >
+     <h4 style="color:red"> <b><u>{{item.empId}}</u></b> </h4> 
+      <h4 style="color:green">{{item. empName}}</h4>
+      <h4 style="color:blue">{{item. sal}}</h4>
+       <h4 style="color:orange">{{item.deptNo}}</h4>
+   </div>
+   <br/>
+</div>

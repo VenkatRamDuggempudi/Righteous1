@@ -1,0 +1,15 @@
+<form [formGroup]="form1">
+   First Name: <input formControlName="fname" />
+    <span style="color:red" *ngIf="form1.controls.fname.invalid && form1.controls.fname.dirty ">First Name is Required</span><br>
+    Last Name:<input formControlName="lname" />
+    <span style="color:red" *ngIf="form1.controls.lname.invalid && form1.controls.lname.dirty ">Last Name is Required</span><br>
+    City:<input formControlName="city" />
+    <span style="color:red" *ngIf="form1.controls.city.invalid && form1.controls.city.dirty ">
+        City Name should be between 3 to 10 characters</span><br>
+    E-Mail:<input formControlName="email" />
+    <span style="color:red" *ngIf="form1.controls.email.invalid && form1.controls.email.dirty ">Valid E-Mail is Required</span><br>
+    PinCode:<input formControlName="pin" />
+    <span style="color:red" *ngIf="form1.controls.pin.invalid && form1.controls.pin.dirty ">pincode should be 6 digits only</span><br>
+
+    <input type="button" value="Register" [disabled]="form1.invalid"/>
+</form>

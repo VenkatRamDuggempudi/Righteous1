@@ -1,0 +1,19 @@
+<form #form1="ngForm">
+    <table>
+   <tr><td>First Name :</td><td><input type="text" #t1="ngModel" name="fname" [(ngModel)]="fname" required width="10S00px" />
+    <span style="color:red" *ngIf="t1.invalid && t1.dirty">First Name is required </span></td></tr> <br>
+
+    <tr><td>Last Name :</td> <td><input  #t2="ngModel" name="lname" [(ngModel)]="lname" required />
+        <span style="color:red" *ngIf="t2.invalid && t2.dirty">Last Name is required </span></td></tr><br>
+
+    <tr><td>City :</td> <td><input type="text" #t3="ngModel" name="city" [(ngModel)]="city" minlength="3" maxlength="10" />
+        <span style="color:red" *ngIf="t3.invalid && t3.dirty">No. of character should be between 3 to 10 characters </span></td></tr><br>
+
+    <tr><td>E-Mail :</td> <td><input type="text" #t4="ngModel" name="email" [(ngModel)]="email" email />
+        <span style="color:red" *ngIf="t4.invalid && t4.dirty">Email is required </span></td></tr> <br>
+
+    <tr><td>Pincode :</td> <td><input type="text" #t5="ngModel" name="pincode" [(ngModel)]="pin" pattern="\d{6}" />
+        <span style="color:red" *ngIf="t5.invalid && t5.dirty">Should be 6 digits </span></td></tr> <br>
+</table>
+    <input type="submit" value="Register" [disabled]="form1.invalid" />
+</form>

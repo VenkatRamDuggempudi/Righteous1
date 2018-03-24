@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Functions</h1>
+
+<!--<p onclick="removeProperty(obj,'name')">This example calls :</p>-->
+<script>
+ 
+function removeProperty(obj,prop) {
+if(obj.hasOwnProperty(prop))
+  {
+    console.log(obj);
+    delete obj[prop];
+    console.log(obj);
+    return true;
+  }
+  else
+    {
+      return false;
+    }
+}
+
+var obj= {
+  name:"John",age:20
+};
+
+removeProperty(obj,'name');
+
+</script>
+</body>
+</html>

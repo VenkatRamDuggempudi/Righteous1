@@ -1,0 +1,47 @@
+table ,td{
+    border: 2px solid lightseagreen;
+    border-radius: 10px;
+
+    
+}
+table {
+    border: 2px solid lightseagreen;
+    border-radius: 10px;
+    margin: 10px;
+    
+}
+div{
+    float: left;
+    border: 1px solid blue  ;
+    margin:  20px;
+    border-radius: 10px;
+    height: 200px;
+}
+
+img{
+    border: 2px solid green;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    width: 150px;
+    height: 120px;
+    
+}
+div:hover{
+    width: 300px;
+    height:250px; 
+}
+img:hover{
+    width: 250px;
+    height:150px; 
+}
+span:hover{
+    margin : 200px;
+}
+span{
+    color: red;
+    font-weight : bold;
+    text-decoration : underline;
+    margin: 50px;
+    margin-bottom: 30px;
+}

@@ -1,0 +1,14 @@
+<div>
+<table>
+    <tr><th>Name</th><th> Gender</th></tr>
+    <tr *ngFor="let item of info ">
+        <td>{{item.name | titlecase}}</td>
+        <td>{{item.gender | gender_abbr}}</td>
+    </tr>
+
+</table>
+</div>
+<div *ngFor="let item of images">
+    <img src="./assets/images/{{item}}" width="80px" height="50px"/><br>
+    <span>{{item}}</span>
+</div>
